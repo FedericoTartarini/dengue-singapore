@@ -1,11 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense } from "react";
 import HomeView from "./Components/HomeView";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-const Loader = lazy(() => import("./Components/Loader"));
-const AboutView = lazy(() => import("./Components/AboutView"));
-const NavigationBar = lazy(() => import("./Components/NavigationBar"));
-const Footer = lazy(() => import("./Components/Footer"));
+import AboutView from "./Components/AboutView";
+import Loader from "./Components/Loader";
+import NavigationBar from "./Components/NavigationBar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
