@@ -33,8 +33,6 @@ for place_mark in place_marks:
     location_name = place_mark.find('td').string.split("(")[0].split("[")[0].split(",")[0].split("/")[0].strip()
     number_cases = int(place_mark.find('simpledata', {"name": "CASE_SIZE"}).string)
 
-    print(location_name)
-
     coordinates = place_mark.find('coordinates')
 
     elements = coordinates.string.split(',0.0')
@@ -63,7 +61,7 @@ for place_mark in place_marks:
                                      "coordinates": polyline,
                                      "color": color}
 
-save_dir = os.path.join(os.getcwd(), "src", "Data", "dengue_data.json")
+save_dir = os.path.join(os.path.dirname(os.getcwd()), "src", "Data", "dengue_data.json")
 
 with open(save_dir, 'w') as fp:
     json.dump(dict_to_export, fp)
