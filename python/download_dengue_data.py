@@ -65,3 +65,5 @@ save_dir = os.path.join(os.path.dirname(os.getcwd()), "src", "Data", "dengue_dat
 
 with open(save_dir, 'w') as fp:
     json.dump(dict_to_export, fp)
+
+print("data correctly downloaded")
