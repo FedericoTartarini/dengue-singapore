@@ -4,14 +4,11 @@ echo "Pull request"
 
 git pull
 
-sleep 30
-
 echo "Starting python scripts"
-# start beacon scanner
-sudo python3 download_dengue_data.py &
-
-sleep 30
+sudo python3 download_dengue_data.py
 
 echo "Pushing to github"
+git add .
+git commit -m "updated data"
 git push
 
