@@ -1,0 +1,5 @@
+# Redirect
+/home         /              200
+
+# Rewrite a path
+/about        /about.html    200
