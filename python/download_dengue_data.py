@@ -1,3 +1,7 @@
+# you need to install the following libraries
+# pip install beautifulsoup4
+# pip install lxml
+
 import json
 from bs4 import BeautifulSoup as Soup
 import requests
