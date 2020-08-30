@@ -22,7 +22,7 @@ r = requests.get(url_data, stream=True)
 z = zipfile.ZipFile(io.BytesIO(r.content))
 file = z.open("dengue-clusters-kml.kml")
 
-soup = Soup(file.read(), 'lxml') # Parse as XML
+soup = Soup(file.read(), 'lxml')  # Parse as XML
 
 place_marks = soup.find_all('placemark')
 
@@ -30,7 +30,9 @@ dict_to_export = {}
 
 for place_mark in place_marks:
 
-    location_name = place_mark.find('td').string.split("(")[0].split("[")[0].split(",")[0].split("/")[0].strip()
+    location_name = \
+    place_mark.find('td').string.split("(")[0].split("[")[0].split(",")[0].split("/")[
+        0].strip()
     number_cases = int(place_mark.find('simpledata', {"name": "CASE_SIZE"}).string)
 
     coordinates = place_mark.find('coordinates')
