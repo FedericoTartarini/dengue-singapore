@@ -49,18 +49,11 @@ function Footer() {
             <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
           </a>
           <a
-            className="mx-3"
+            className="ml-3"
             href="https://github.com/FedericoTartarini"
             aria-label="GitHub"
           >
             <FontAwesomeIcon icon={faGithub} size={"2x"} />
-          </a>
-          <a
-            className="mx-3"
-            href="https://play.google.com/store/apps/details?id=com.airqualityapp"
-            aria-label="GooglePlay"
-          >
-            <FontAwesomeIcon icon={faGooglePlay} size={"2x"} />
           </a>
         </span>
       </div>

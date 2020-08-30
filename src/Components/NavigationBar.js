@@ -10,11 +10,7 @@ function NavigationBar() {
     <nav className="container mx-auto flex items-center justify-between flex-wrap p-4">
       <Link to="/">
         <div className="flex items-center flex-shrink-0">
-          <img
-            src={logo}
-            alt="logo Air Quality and Weather SG"
-            className="w-20"
-          />
+          <img src={logo} alt="Dengue Singapore logo" className="w-20" />
           {/*<span className="font-semibold text-xl tracking-tight ml-3 w-40">*/}
           <span className="font-semibold text-xl tracking-tight ml-3 w-40">
             Dengue Singapore

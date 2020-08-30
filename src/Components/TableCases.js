@@ -19,25 +19,25 @@ function TableCases() {
         <table className="table-auto text-center">
           <tbody>
             <tr className={fontSize}>
-              <td className={classRow} style={{ color: "#2ca02c" }}>
+              <td className={classRow} style={{ color: "#ffba08" }}>
                 1 - 5
               </td>
-              <td className={classRow} style={{ color: "#1f77b4" }}>
+              <td className={classRow} style={{ color: "#f48c06" }}>
                 6 - 10
               </td>
-              <td className={classRow} style={{ color: "#fcc105" }}>
+              <td className={classRow} style={{ color: "#e85d04" }}>
                 11 - 25
               </td>
-              <td className={classRow} style={{ color: "#ff7f0e" }}>
+              <td className={classRow} style={{ color: "#dc2f02" }}>
                 25 - 50
               </td>
-              <td className={classRow} style={{ color: "#d62728" }}>
+              <td className={classRow} style={{ color: "#d00000" }}>
                 51 - 100
               </td>
-              <td className={classRow} style={{ color: "#9467bd" }}>
+              <td className={classRow} style={{ color: "#850000" }}>
                 101 - 200
               </td>
-              <td className={classRow} style={{ color: "#800000" }}>
+              <td className={classRow} style={{ color: "#000" }}>
                 > 200
               </td>
             </tr>

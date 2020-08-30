@@ -45,19 +45,19 @@ for place_mark in place_marks:
         polyline.append([float(lat), float(lon)])
 
     if number_cases < 5:
-        color = "#2ca02c"
+        color = "#ffba08"
     elif number_cases < 10:
-        color = "#1f77b4"
+        color = "#f48c06"
     elif number_cases < 25:
-        color = "#fcc105"
+        color = "#e85d04"
     elif number_cases < 50:
-        color = "#ff7f0e"
+        color = "#dc2f02"
     elif number_cases < 100:
-        color = "#d62728"
+        color = "#d00000"
     elif number_cases < 200:
-        color = "#9467bd"
+        color = "#850000"
     elif number_cases >= 200:
-        color = "#800000"
+        color = "#000"
 
     dict_to_export[location_name] = {"cases": number_cases,
                                      "coordinates": polyline,

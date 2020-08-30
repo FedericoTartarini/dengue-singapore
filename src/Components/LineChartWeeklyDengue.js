@@ -8,7 +8,7 @@ function LineChartWeeklyDengue() {
   let chartHeight, yearToDisplay;
 
   if (width > 500) {
-    chartHeight = 1200;
+    chartHeight = 500;
     yearToDisplay = 2014;
   } else {
     chartHeight = 400;
@@ -96,47 +96,58 @@ function LineChartWeeklyDengue() {
   });
 
   return (
-    <Line
-      data={data}
-      height={chartHeight}
-      width={width}
-      options={{
-        // maintainAspectRatio: false,
-        scales: {
-          xAxes: [
-            {
-              gridLines: {
-                display: false,
-                drawOnChartArea: false,
-                drawTicks: true,
-              },
-              ticks: {
-                display: true,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: "Week number",
-              },
+    <div>
+      <div className="container mx-auto flex flex-col text-center">
+        <p className="mt-6">
+          A total of {weekly_disease["2020"].cases.reduce((a, b) => a + b, 0)}{" "}
+          cases have been recorded in the first{" "}
+          {weekly_disease["2020"].cases.length} weeks of 2020.
+        </p>
+      </div>
+      <div className="container mx-auto mt-2 flex flex-col">
+        <Line
+          data={data}
+          height={chartHeight}
+          width={width}
+          options={{
+            maintainAspectRatio: false,
+            scales: {
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                    drawTicks: true,
+                  },
+                  ticks: {
+                    display: true,
+                  },
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Week number",
+                  },
+                },
+              ],
+              yAxes: [
+                {
+                  id: "y1",
+                  type: "linear",
+                  position: "left",
+                  gridLines: { color: "rgba(0, 0, 0, 0.05)" },
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  scaleLabel: {
+                    display: true,
+                    labelString: "Dengue weekly fever cases",
+                  },
+                },
+              ],
             },
-          ],
-          yAxes: [
-            {
-              id: "y1",
-              type: "linear",
-              position: "left",
-              gridLines: { color: "rgba(0, 0, 0, 0.05)" },
-              ticks: {
-                beginAtZero: true,
-              },
-              scaleLabel: {
-                display: true,
-                labelString: "Dengue weekly fever cases",
-              },
-            },
-          ],
-        },
-      }}
-    />
+          }}
+        />
+      </div>
+    </div>
   );
 }
 
