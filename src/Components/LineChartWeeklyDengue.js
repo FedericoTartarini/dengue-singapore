@@ -6,11 +6,12 @@ function LineChartWeeklyDengue() {
   const { innerWidth: width } = window;
 
   let chartHeight, yearToDisplay;
+
   if (width > 500) {
-    chartHeight = 50;
+    chartHeight = 1200;
     yearToDisplay = 2014;
   } else {
-    chartHeight = 100;
+    chartHeight = 400;
     yearToDisplay = 2016;
   }
 
@@ -98,7 +99,7 @@ function LineChartWeeklyDengue() {
     <Line
       data={data}
       height={chartHeight}
-      width={"100%"}
+      width={width}
       options={{
         // maintainAspectRatio: false,
         scales: {

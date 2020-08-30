@@ -69,7 +69,9 @@ function HomeView() {
           See legend over the map for more information.
         </p>
       </div>
-      <LineChartWeeklyDengue />
+      <div className="container mx-auto flex flex-col">
+        <LineChartWeeklyDengue />
+      </div>
     </div>
   );
 }
