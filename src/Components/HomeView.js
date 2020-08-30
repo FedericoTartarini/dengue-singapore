@@ -50,11 +50,11 @@ function HomeView() {
               <div className="text-center">
                 <span className="text-base capitalize">{value}</span> <br />
                 Number of cases {cases[value].cases}.<br /> NEA alert level{" "}
-                {cases[value].cases < 10 ? (
-                  <span className="text-base text-yellow-600">Yellow</span>
-                ) : (
-                  <span className="text-base text-red-600">Red</span>
-                )}
+                {/*{cases[value].cases < 10 ? (*/}
+                {/*  <span className="text-base text-yellow-600">Yellow</span>*/}
+                {/*) : (*/}
+                {/*  <span className="text-base text-red-600">Red</span>*/}
+                {/*)}*/}
               </div>
             </Popup>
           </Polygon>
