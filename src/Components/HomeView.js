@@ -2,7 +2,7 @@ import React from "react";
 import { Map, Polygon, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import TableCases from "./TableCases";
-import BarChartWeeklyDengue from "./BarChartWeeklyDengue";
+import LineChartWeeklyDengue from "./LineChartWeeklyDengue";
 
 function HomeView() {
   const position = [1.35, 103.825];
@@ -26,6 +26,7 @@ function HomeView() {
         center={position}
         zoom={zoom}
         style={{ height: height - 92 - 28 - 35 - 92, width: "100%" }}
+        scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -68,7 +69,7 @@ function HomeView() {
           See legend over the map for more information.
         </p>
       </div>
-      <BarChartWeeklyDengue />
+      <LineChartWeeklyDengue />
     </div>
   );
 }

@@ -2,14 +2,16 @@ import React from "react";
 
 import { Line } from "react-chartjs-2";
 
-function BarChartWeeklyDengue() {
+function LineChartWeeklyDengue() {
   const { innerWidth: width } = window;
 
-  let chartHeight;
+  let chartHeight, yearToDisplay;
   if (width > 500) {
-    chartHeight = 250;
+    chartHeight = 50;
+    yearToDisplay = 2014;
   } else {
-    chartHeight = 350;
+    chartHeight = 100;
+    yearToDisplay = 2016;
   }
 
   let weekly_disease = require("../Data/infectious_disease.json");
@@ -73,6 +75,12 @@ function BarChartWeeklyDengue() {
   };
 
   Object.keys(weekly_disease).map((year) => {
+    let hideLine = false;
+
+    if (parseInt(year) < yearToDisplay) {
+      hideLine = true;
+    }
+
     data.datasets.push({
       label: year,
       backgroundColor: "rgba(0, 0, 0, 0)",
@@ -82,13 +90,14 @@ function BarChartWeeklyDengue() {
       hoverBorderColor: weekly_disease[year].color,
       data: weekly_disease[year].cases,
       yAxisID: "y1",
+      hidden: hideLine,
     });
   });
 
   return (
     <Line
       data={data}
-      height={50}
+      height={chartHeight}
       width={"100%"}
       options={{
         // maintainAspectRatio: false,
@@ -103,6 +112,10 @@ function BarChartWeeklyDengue() {
               ticks: {
                 display: true,
               },
+              scaleLabel: {
+                display: true,
+                labelString: "Week number",
+              },
             },
           ],
           yAxes: [
@@ -116,7 +129,7 @@ function BarChartWeeklyDengue() {
               },
               scaleLabel: {
                 display: true,
-                labelString: "Dengue Fever Cases",
+                labelString: "Dengue weekly fever cases",
               },
             },
           ],
@@ -126,4 +139,4 @@ function BarChartWeeklyDengue() {
   );
 }
 
-export default BarChartWeeklyDengue;
+export default LineChartWeeklyDengue;
