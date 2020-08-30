@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  faGithub,
-  faGooglePlay,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const logo = require("../Static/Icons/mosquito.png");
 
