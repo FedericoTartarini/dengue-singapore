@@ -7,7 +7,7 @@ echo "Pull request"
 git pull
 
 echo "Starting python scripts"
-sudo python3 /python/download_dengue_data.py
+sudo python3 ./python/download_dengue_data.py
 
 echo "Pushing to github"
 git add .

@@ -63,7 +63,8 @@ for place_mark in place_marks:
                                      "coordinates": polyline,
                                      "color": color}
 
-save_dir = os.path.join(os.path.dirname(os.getcwd()), "src", "Data", "dengue_data.json")
+# save_dir = os.path.join(os.path.dirname(os.getcwd()), "src", "Data", "dengue_data.json")
+save_dir = os.path.join(os.getcwd(), "src", "Data", "dengue_data.json")
 
 with open(save_dir, 'w') as fp:
     json.dump(dict_to_export, fp)
