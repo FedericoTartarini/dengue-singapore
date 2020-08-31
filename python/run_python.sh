@@ -14,3 +14,5 @@ git add .
 git commit -m "updated data"
 git push
 
+yarn deploy
+
