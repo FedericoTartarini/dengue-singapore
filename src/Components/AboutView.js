@@ -38,7 +38,7 @@ function AboutView() {
           <p className="mb-8 leading-relaxed">
             Dengue Singapore uses data from the National Environment Agency
             (NEA) in Singapore, hence, you trust the data. Data is updated on a
-            daly basis at 1 am.
+            daly basis.
           </p>
           <div className="flex w-full justify-center">
             <a href="https://www.buymeacoffee.com/FedericoT">
