@@ -66,13 +66,6 @@ function HomeView() {
           of cases recorded since the start of that cluster and to know the NEA
           alert level.
         </p>
-        <p className="mt-6">
-          This website uses data provided by the{" "}
-          <a href="https://data.gov.sg/dataset/dengue-clusters">
-            Singaporean government.
-          </a>{" "}
-          Data is updated on a daly basis at 1 am.
-        </p>
         <p className="mt-2">
           A dengue cluster is a locality where two or more cases have onset
           within 14 days and are located within 150m of each other. While
@@ -81,6 +74,12 @@ function HomeView() {
           risk with less than 10 cases), and; green (no new cases but under
           surveillance for 21 days). More information about the NEA alert level
           can be found by clicking on the relative cluster.
+        </p>
+        <p className="mt-6">
+          This website uses data provided by the{" "}
+          <a href="https://data.gov.sg/dataset/dengue-clusters">
+            Singaporean government.
+          </a>
         </p>
       </div>
       <LineChartWeeklyDengue />
