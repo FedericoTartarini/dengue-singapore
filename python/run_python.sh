@@ -15,5 +15,5 @@ git commit -m "updated data"
 git push
 
 # you need yarn and node installed on the machine
-yarn deploy
+# yarn deploy
 
