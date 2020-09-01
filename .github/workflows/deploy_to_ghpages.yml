@@ -26,5 +26,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install and Build
         run: |
+          git config --global user.name "Github action"
           yarn install
           yarn deploy
