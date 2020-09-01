@@ -75,7 +75,7 @@ function LineChartWeeklyDengue() {
     datasets: [],
   };
 
-  Object.keys(weekly_disease).map((year) => {
+  Object.keys(weekly_disease).forEach((year) => {
     let hideLine = false;
 
     if (parseInt(year) < yearToDisplay) {
