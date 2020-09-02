@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const logo = require("../Static/Icons/mosquito.png");
+const logo = require("../Static/Icons/icon.png");
 
 function NavigationBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -10,7 +10,7 @@ function NavigationBar() {
     <nav className="container mx-auto flex items-center justify-between flex-wrap p-4">
       <Link to="/">
         <div className="flex items-center flex-shrink-0">
-          <img src={logo} alt="Dengue Singapore logo" className="w-20" />
+          <img src={logo} alt="Dengue Singapore logo" className="w-12" />
           <span className="font-semibold text-xl tracking-tight ml-3 w-40">
             Dengue Singapore
           </span>

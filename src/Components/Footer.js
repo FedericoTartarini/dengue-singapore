@@ -1,7 +1,7 @@
 import React from "react";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const logo = require("../Static/Icons/mosquito.png");
+const logo = require("../Static/Icons/icon.png");
 
 function Footer() {
   return (
@@ -16,9 +16,9 @@ function Footer() {
             {/* todo add webp image */}
             <source
               type="image/png"
-              srcSet={require("../Static/Icons/mosquito.png")}
+              srcSet={require("../Static/Icons/icon.png")}
             />
-            <img src={logo} className="w-20 mx-2" alt="Dengue Singapore" />
+            <img src={logo} className="w-12 mx-2" alt="Dengue Singapore" />
           </picture>
           <div>
             <p className="text-xl">Dengue SG</p>
