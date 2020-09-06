@@ -5,6 +5,7 @@ import AboutView from "./Components/AboutView";
 import Loader from "./Components/Loader";
 import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
+import LineChartCasesLocation from "./Components/LineChartCasesLocation";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about">
               <AboutView />
             </Route>
+            <Route path="/location/:name" component={LineChartCasesLocation} />
           </Switch>
         </Suspense>
         <div>

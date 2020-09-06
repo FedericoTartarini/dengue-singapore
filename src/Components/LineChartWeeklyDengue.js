@@ -97,11 +97,13 @@ function LineChartWeeklyDengue() {
 
   return (
     <div>
-      <div className="container mx-auto flex flex-col text-center">
+      <div className="container mx-auto flex px-5 flex-col">
         <p className="mt-6">
-          A total of {weekly_disease["2020"].cases.reduce((a, b) => a + b, 0)}{" "}
-          cases have been recorded in the first{" "}
-          {weekly_disease["2020"].cases.length} weeks of 2020.
+          The line chart below shows the weekly number of dengue fever cases
+          recorded in Singapore. A total of{" "}
+          {weekly_disease["2020"].cases.reduce((a, b) => a + b, 0)} cases have
+          been recorded in the first {weekly_disease["2020"].cases.length} weeks
+          of 2020.
         </p>
       </div>
       <div className="container mx-auto mt-2 flex flex-col">
@@ -146,6 +148,12 @@ function LineChartWeeklyDengue() {
             },
           }}
         />
+      </div>
+      <div className="container mx-auto flex px-5 flex-col">
+        <p className="mt-6">
+          The data until May 2020 were downloaded from data.gov.sg. while the
+          latest data are downloaded weekly from the nea.gov.sg website.
+        </p>
       </div>
     </div>
   );

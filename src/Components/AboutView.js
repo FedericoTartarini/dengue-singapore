@@ -31,14 +31,15 @@ function AboutView() {
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Dengue Singapore
           </h1>
-          <p className="mb-8 leading-relaxed">
+          <p className="mb-6 leading-relaxed">
             Hello! My name is Federico Tartarini, the developer of the Dengue
             Singapore website.
           </p>
           <p className="mb-8 leading-relaxed">
-            Dengue Singapore uses data from the National Environment Agency
-            (NEA) in Singapore, hence, you trust the data. Data is updated on a
-            daly basis.
+            Dengue Singapore is an easy to use web-site which lets you monitor
+            the dengue clusters in Singapore. All the data in this website are
+            updated daily. Data are downloaded using the APIs provided by the
+            National Environment Agency (NEA) in Singapore.
           </p>
           <div className="flex w-full justify-center">
             <a href="https://www.buymeacoffee.com/FedericoT">
@@ -53,13 +54,23 @@ function AboutView() {
           <p className="text-sm mt-2 text-gray-600 mb-8 w-full">
             To support my work please consider buying me a coffee.
           </p>
+          <p className="leading-relaxed mb-6">
+            If you enjoyed this website you may also want to visit{" "}
+            <a href={"weather.sg"}>Air Quality and Weather SG</a>. This website
+            allows you to check the weather forecast and air quality in
+            Singapore. With{" "}
+            <a href={"weather.sg"}>Air Quality and Weather SG</a> you can
+            monitor the current weather conditions in your location as well as
+            the 24-h and 2-h weather forecasts for Singapore. It also features a
+            rain radar.
+          </p>
           <p className="leading-relaxed">
             I would like to thank the Singaporean government who provides the
             data. In addition, I would like to thank the developers at
             OpenStreetMap, Leaflet, React, FontAwesome, Inkscape and Google. I
             could now have created Dengue Singapore without their amazing work.
           </p>
-          <p>
+          <p className="leading-relaxed">
             I have released the website code open-source and upload it on
             GitHub. Feel free to{" "}
             <a href="https://github.com/FedericoTartarini/dengue-singapore">

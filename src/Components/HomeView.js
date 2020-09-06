@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import TableCases from "./TableCases";
 import LineChartWeeklyDengue from "./LineChartWeeklyDengue";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 function HomeView() {
   const position = [1.35, 103.825];
@@ -47,43 +48,54 @@ function HomeView() {
             color={cases[value].color}
           >
             <Popup>
-              <div className="text-center">
-                <span className="text-base capitalize">{value}</span> <br />
-                Number of cases {cases[value].cases}.<br /> NEA alert level{" "}
-                {cases[value].cases < 10 ? (
-                  <span className="text-base text-yellow-600">Yellow</span>
-                ) : (
-                  <span className="text-base text-red-600">Red</span>
-                )}
+              <div className="text-center text-base">
+                <span className="capitalize">
+                  {value.match(/[A-Z][a-z]+|[0-9]+/g).join(" ")}
+                </span>
+                <br />
+                <span className="mt-2">
+                  Number of cases {cases[value].cases}.<br /> NEA alert level{" "}
+                  {cases[value].cases < 10 ? (
+                    <span className="text-yellow-600">Yellow</span>
+                  ) : (
+                    <span className="text-red-600">Red</span>
+                  )}
+                  <br />
+                </span>
+                <Link to={`/location/${value}`}>
+                  <span className="text-base">Cases over time</span>
+                </Link>
               </div>
             </Popup>
           </Polygon>
         ))}
       </Map>{" "}
-      <div className="container mx-auto flex flex-col px-5 text-center text-gray-900">
-        <p className="mt-2">
-          Click on each cluster in the map above to learn more about the number
-          of cases recorded since the start of that cluster and to know the NEA
-          alert level.
+      <div className="container mx-auto flex flex-col px-5 text-gray-900">
+        <p className="mt-4">
+          Click on each cluster in the map above to learn more about the
+          cumulative number of cases recorded in that location since the start
+          of that cluster. The popup also shows the NEA alert level and contains
+          a link to a chart that shows how the number of cases over time.
         </p>
         <p className="mt-6">
-          A dengue cluster is a locality where two or more cases have onset
-          within 14 days and are located within 150m of each other. While
-          National Environmental Agency (NEA) categorizes clusters in three
-          alert levels: red (high risk with more than 10 cases); yellow (high
-          risk with less than 10 cases), and; green (no new cases but under
-          surveillance for 21 days). More information about the NEA alert level
-          can be found by clicking on the relative cluster.
+          A dengue cluster is a locality where two or more cases have been
+          recorded within the last 14 days and are located within 150 m of each
+          other. The National Environmental Agency (NEA) categorizes clusters in
+          three alert levels: red (high risk with more than 10 cases); yellow
+          (high risk with less than 10 cases), and; green (no new cases but
+          under surveillance for 21 days).
         </p>
         <p className="mt-2">
           This website uses data provided by the{" "}
           <a href="https://data.gov.sg/dataset/dengue-clusters">
             Singaporean government.
-          </a>
+          </a>{" "}
+          Data are programmatically downloaded on a daily basis at 6 am from the
+          website data.gov.sg.
         </p>
       </div>
       <LineChartWeeklyDengue />
-      <div className="container mx-auto flex flex-col px-5 py-4 text-center text-gray-900">
+      <div className="container mx-auto flex flex-col px-5 py-4 text-gray-900">
         <p className="mt-0">
           The NEA suggests the following protective actions to reduce dengue
           "Spray, Apply and Wear". Spray insecticide in dark corners, apply
