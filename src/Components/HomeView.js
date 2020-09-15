@@ -103,8 +103,8 @@ function HomeView() {
         </p>
         <p className="mt-2">
           People should also ensure that no stagnant water is present in their
-          homes and immediate surrounding and should remove any stagnant water
-          if present.
+          homes and immediate surroundings and in case any stagnant water is
+          present it should be removed immediately.
         </p>
       </div>
     </div>

@@ -151,7 +151,7 @@ function LineChartWeeklyDengue() {
       </div>
       <div className="container mx-auto flex px-5 flex-col">
         <p className="mt-6">
-          The data until May 2020 were downloaded from data.gov.sg. while the
+          The data until May 2020 has been downloaded from data.gov.sg while the
           latest data are downloaded weekly from the nea.gov.sg website.
         </p>
       </div>
