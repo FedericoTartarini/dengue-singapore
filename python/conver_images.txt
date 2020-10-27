@@ -1,6 +1,0 @@
-# create favicon
-magick icon.png -background none -resize 128x128 -density 128x128 favicon.ico
-
-magick icon.png -background none -resize 192x192 -density 192x192 logo192.png
-magick icon.png -background none -resize 512x512 -density 512x512 logo512.png
-
